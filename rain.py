@@ -34,5 +34,22 @@ if weather_id < 700:
 from_number = "+1978633xxxx"  # Twilio-verified phone number
 to_number = "+917717xxxxxx"  # Recipient's number (Add country code)
 
+# Initialize Twilio Client
+client = Client(account_sid, auth_token)
 
+# Send SMS based on weather condition
+if will_rain:
+    message = client.messages.create(
+        body="It's going to rain today. Don't forget to bring an umbrella ☔!",
+        from_=from_number,
+        to=to_number
+    )
+else:
+    message = client.messages.create(
+        body="It's a sunny day! Enjoy the sunshine ☀️!",
+        from_=from_number,
+        to=to_number
+    )
+
+print(f"Message sent with status: {message.status}")
 
