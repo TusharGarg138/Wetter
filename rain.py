@@ -11,3 +11,13 @@ auth_token = "8c930b01ebad401074fe8cba8ad1a406"  # Set this in your environment 
 city = "Pune" # city name of you want to know the weather
 url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
 
+#use when we are calling it with specific latitude and longitude
+parameters = {
+    "lat": 46.947975,
+    "lon": 7.447447,
+    "appid": api_key,
+    "cnt": 4,
+    "units": "metric"  # Optional: Fetch temperature in Celsius
+}
+
+
