@@ -20,4 +20,15 @@ parameters = {
     "units": "metric"  # Optional: Fetch temperature in Celsius
 }
 
+response = requests.get(url)
+data = response.json()
+print(data)
+
+will_rain = False
+
+weather_id = data["weather"][0]["id"]
+if weather_id < 700:
+    will_rain = True
+
+
 
