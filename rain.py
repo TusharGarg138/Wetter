@@ -30,5 +30,9 @@ weather_id = data["weather"][0]["id"]
 if weather_id < 700:
     will_rain = True
 
+# Twilio SMS settings
+from_number = "+1978633xxxx"  # Twilio-verified phone number
+to_number = "+917717xxxxxx"  # Recipient's number (Add country code)
+
 
 
